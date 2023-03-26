@@ -1,2 +1,21 @@
 #!/bin/bash
-yay -S libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols cairo pango polkit glslang libinput libxcb libxkbcommon opengl-driver pixman wayland xcb-util-errors xcb-util-renderutil xcb-util-wm seatd vulkan-icd-loader vulkan-validation-layers xorg-xwayland libliftoff libdisplay-info kitty
+echo "Start setup..."
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
+makepkg -si
+cd ..
+yay -Syu --devel
+yay -S libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols cairo pango polkit glslang libinput libxcb libxkbcommon opengl-driver pixman wayland xcb-util-errors xcb-util-renderutil xcb-util-wm seatd vulkan-icd-loader vulkan-validation-layers xorg-xwayland libliftoff libdisplay-info git cmake ninja gcc gdb meson vulkan-headers wayland-protocols xorgproto kitty
+
+#install waybar
+git clone https://aur.archlinux.org/waybar-hyprland-git.git
+cd waybar-hyprland-git
+makepkg -si
+cd ..
+
+#install rofi
+git clone https://aur.archlinux.org/rofi-lbonn-wayland-git.git
+cd rofi-lbonn-wayland-git
+makepkg -si
+cd ..
+echo "Finish setup..."
