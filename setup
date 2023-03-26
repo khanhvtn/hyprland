@@ -1,0 +1,2 @@
+#!/bin/bash
+yay -S libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols cairo pango polkit glslang libinput libxcb libxkbcommon opengl-driver pixman wayland xcb-util-errors xcb-util-renderutil xcb-util-wm seatd vulkan-icd-loader vulkan-validation-layers xorg-xwayland libliftoff libdisplay-info kitty
